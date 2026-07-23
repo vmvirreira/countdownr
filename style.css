@@ -1,0 +1,107 @@
+/* ---- Fonts ---- */
+@font-face {
+  font-family: "DSEG7";
+  src: url("/assets/fonts/DSEG7Modern-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ---- General Layout ---- */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: #111;
+  color: #00ff00;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Orbitron', Arial, sans-serif;
+}
+
+/* ---- Heading ---- */
+h1 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: #00ff00;
+}
+
+/* ---- Controls ---- */
+.controls {
+  margin-bottom: 20px;
+}
+
+input, button {
+  font-family: 'Orbitron', Arial, sans-serif;
+  font-size: 1rem;
+  padding: 5px 10px;
+  margin: 5px;
+  background: #222;
+  border: 1px solid #00ff00;
+  color: #00ff00;
+}
+
+button:hover {
+  background: #00ff00;
+  color: #111;
+  cursor: pointer;
+}
+
+/* ---- Countdown Digits ---- */
+#countdown .segment {
+  font-family: "DSEG7", monospace;
+  font-size: 3rem;
+  color: #00ff00;
+  text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
+}
+
+/* ---- Labels (Y, W, D, H, M, S) ---- */
+.label {
+  font-family: 'Orbitron', Arial, sans-serif;
+  font-size: 1rem;
+  margin: 0 15px 0 5px;
+  color: #00ff00;
+}
+
+/* ---- Blinking Colons ---- */
+@keyframes blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+.colon {
+  font-family: "DSEG7", monospace;
+  font-size: 3rem;
+  color: #00ff00;
+  text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
+  animation: blink 1s step-start infinite;
+}
+
+/* ---- Totals section ---- */
+.totals {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.totals div {
+  margin: 10px 0;
+}
+
+.totals .segment {
+  font-family: "DSEG7", monospace;
+  font-size: 2rem;
+  color: #00ff00;
+  text-shadow: 0 0 8px #00ff00, 0 0 16px #00ff00;
+}
+
+.totals .label {
+  font-family: 'Orbitron', Arial, sans-serif;
+  font-size: 1rem;
+  margin-left: 10px;
+  color: #00ff00;
+}

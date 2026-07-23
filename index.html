@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DSEG Countdown</title>
+
+  <!-- Orbitron for labels/UI -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="countdown-container">
+    <h1>Countdown Timer</h1>
+
+    <div class="controls">
+      <input type="datetime-local" id="targetTime">
+      <button onclick="startCountdown()">Start</button>
+    </div>
+
+    <!-- Main countdown -->
+    <div id="countdown">
+      <span class="segment" id="years"></span><span class="label">Y</span>
+      <span class="segment" id="weeks"></span><span class="label">W</span>
+      <span class="segment" id="days"></span><span class="label">D</span>
+      <span class="segment" id="hours"></span><span class="label">H</span>
+      <span class="colon">:</span>
+      <span class="segment" id="minutes"></span><span class="label">M</span>
+      <span class="colon">:</span>
+      <span class="segment" id="seconds"></span><span class="label">S</span>
+    </div>
+
+    <!-- Totals -->
+    <div class="totals">
+      <div><span class="segment" id="totalHours"></span><span class="label">Total Hours</span></div>
+      <div><span class="segment" id="totalMinutes"></span><span class="label">Total Minutes</span></div>
+      <div><span class="segment" id="totalSeconds"></span><span class="label">Total Seconds</span></div>
+    </div>
+  </div>
+
+  <script src="/script.js"></script>
+</body>
+</html>
